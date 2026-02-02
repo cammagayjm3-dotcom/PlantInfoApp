@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* BACKGROUND GRADIENT */
+.gradient-bg {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgb(255, 220, 220), rgb(220, 240, 255));
+  padding: 15px;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 5px 15px 5px;
+}
+
+#titleLabel {
+  font-size: 30px;
+  font-weight: 800;
+  color: rgb(220, 50, 100); /* bright pink */
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.searchLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+#searchField {
+  width: 230px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0.1);
+  font-size: 16px;
+  outline: none;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: rgb(220, 50, 100);
+  color: white;
+}
+
+.btn-secondary {
+  background: rgb(255, 180, 100);
+  color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* MAIN CONTENT */
+.content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 15px;
+}
+
+/* MENU */
+.menu-card {
+  border: 2px solid rgb(150, 200, 180);
+  border-radius: 16px;
+  background: rgb(255, 235, 240);
+  overflow: hidden;
+}
+
+.menu-title {
+  padding: 12px;
+  font-weight: 800;
+  border-bottom: 2px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.5);
+}
+
+.plant-list {
+  list-style: none;
+  padding: 10px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.plant-list li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: rgb(50, 30, 70);
+  transition: 0.15s;
+}
+
+.plant-list li:hover {
+  background: rgba(255, 180, 100, 0.45);
+}
+
+.plant-list li.active {
+  background: rgb(255, 180, 100);
+  color: white;
+}
+
+/* DETAILS CARD */
+.details-card {
+  border: 2px solid rgb(170, 200, 170);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card-gradient {
+  background: linear-gradient(to bottom, rgb(255, 255, 200), rgb(200, 255, 220));
+}
+
+/* IMAGE BOX */
+.image-box {
+  width: 100%;
+  min-height: 320px;
+  border: 3px solid rgb(200, 180, 100);
+  border-radius: 16px;
+  background: rgb(255, 250, 200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#imageText {
+  font-size: 18px;
+  font-style: italic;
+  color: rgb(100, 50, 0);
+  padding: 15px;
+  text-align: center;
+}
+
+.plant-image {
+  width: 100%;       /* image fills the width of the box */
+  height: auto;      /* height adjusts automatically to keep aspect ratio */
+  display: block;
+}
+/* INFO AREA */
+.info-card {
+  border: 2px solid rgb(150, 200, 180);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgb(240, 250, 255);
+}
+
+.info-title {
+  padding: 12px;
+  font-weight: 800;
+  border-bottom: 2px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.5);
+}
+
+.info-area {
+  padding: 15px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  white-space: pre-wrap;
+  line-height: 1.45;
+  min-height: 220px;
+}
+
+/* DARK MODE */
+.dark .gradient-bg {
+  background: linear-gradient(to bottom, #222, #111);
+}
+
+.dark #titleLabel {
+  color: white;
+}
+
+.dark .menu-card {
+  background: rgb(60, 65, 70);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.dark .plant-list li {
+  color: white;
+}
+
+.dark .plant-list li:hover {
+  background: rgba(255, 180, 100, 0.25);
+}
+
+.dark .info-card {
+  background: rgb(50, 55, 60);
+}
+
+.dark .info-area {
+  color: white;
+}
+
+.dark .image-box {
+  background: rgb(80, 80, 80);
+}
+
+.dark #imageText {
+  color: white;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  #searchField {
+    width: 170px;
+  }
+
+  .plant-list {
+    max-height: 260px;
+  }
+}
