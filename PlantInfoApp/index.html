@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Encyclopedia - Colorful Edition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app gradient-bg">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <h1 id="titleLabel">Plant Encyclopedia</h1>
+
+      <div class="topbar-right">
+        <label class="searchLabel">Search:</label>
+        <input id="searchField" type="text" placeholder="Search plant name here..." />
+
+        <button id="backButton" class="btn btn-secondary hidden">Back to Plant Menu</button>
+        <button id="darkModeButton" class="btn btn-primary">Dark Mode</button>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+      <!-- LEFT MENU -->
+      <aside class="menu">
+        <div class="menu-card">
+          <div class="menu-title">Plant Menu</div>
+          <ul id="plantList" class="plant-list"></ul>
+        </div>
+      </aside>
+
+      <!-- RIGHT PANEL -->
+      <section class="details">
+        <div class="details-card card-gradient">
+
+          <div id="imageBox" class="image-box">
+            <span id="imageText">Select a plant from the menu</span>
+            <img id="plantImage" class="plant-image hidden" alt="Plant image" />
+          </div>
+
+          <div class="info-card">
+            <div class="info-title">Detailed Plant Information</div>
+            <div id="infoArea" class="info-area"></div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
